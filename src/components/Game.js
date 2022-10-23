@@ -16,8 +16,8 @@ export default function Game({pos}) {
         if (correct.length < 1) {
             setTime(0);
             inter = setInterval(()=>{
-                setTime(c => c + 1);
-            }, 1000)
+                setTime(c => +(0.1 + c).toFixed(12));
+            }, 100)
             console.log("one register.")
         }
 
