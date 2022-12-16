@@ -4,7 +4,9 @@ import {initializeApp} from 'firebase/app'
 import {getFirestore} from 'firebase/firestore'
 import { doc, getDoc } from "firebase/firestore";
 import {useEffect,useState} from 'react';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MainMenu from './components/MainMenu';
+import Leaderboard from './components/Leaderboard'
 
 // Initialize Firebase
 const app = initializeApp(config);
@@ -15,6 +17,7 @@ async function waldoThing() {
   const docInfo = await getDoc(docRef)
   if (docInfo.exists()) {
     let p = docInfo.data();
+    console.log(p);
     return [[p.waldominX, p.waldominY], [p.waldominX, p.waldomaxY], [p.waldomaxX, p.waldominY], [p.waldomaxX, p.waldomaxY]]
   } else {
     // doc.data() will be undefined in this case
@@ -26,16 +29,31 @@ async function waldoThing() {
 
 
 function App() {
-  const [pos, setPos] = useState([])
-  useEffect(()=> {
+
+  const [waldoPos, setWaldoPos] = useState([]);
+  
+  useEffect(() => {
     waldoThing().then((result)=> {
-      setPos(result)
+      setWaldoPos(result);
     })
-  }, [])
+    }
+    ,[]);
+
   return (
-    <div className="App">
-      <Game pos={pos}/>
+    <BrowserRouter>
+    <nav>
+    <h1>Where's Waldo?</h1>
+    <div className='buttons'>
+      <a href='/'>Main Menu</a>
     </div>
+    </nav>
+    
+      <Routes>
+        <Route path='/' element={<MainMenu></MainMenu>} />
+        <Route path='/leaderboard/:gameid' element={<Leaderboard></Leaderboard>} />
+        <Route path='/game/:gameid' element={<Game pos={waldoPos}/>}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
