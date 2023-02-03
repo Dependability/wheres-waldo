@@ -34,8 +34,15 @@ export default function InputLeader(props) {
         
     }
 
-    return (<form onSubmit={submitForm}>
+    return (<div className='inputLeader-wrap'>
+        <div className='inputLeader'>
+        <p>You have found Waldo in <span>{props.score}s</span>!</p>
+        <p>Submit your score to the leaderboard</p>
+        <form onSubmit={submitForm}>
         <label htmlFor="name">Name<input type="text" maxLength="16" minLength="3" id="name" required/></label>
+        <div>
+        <button type='button' onClick={() => {navigate('/')}}>Cancel</button>
         <input type="submit"></input>
-    </form>)
+        </div>
+    </form></div></div>)
 }

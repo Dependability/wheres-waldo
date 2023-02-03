@@ -4,8 +4,8 @@ export default function Target({position,hidden, arr, setCorrect, setHidden}) {
 
     function checkPosition() {
         setHidden(true);
-        const topLeft = [position[0] - 50, position[1] - 50];
-        const botRight = [position[0] + 50, position[1] + 50];
+        const topLeft = [position[0] - 100, position[1] - 100];
+        const botRight = [position[0] + 100, position[1] + 100];
         console.log(arr)
         for (let i = 0; i < arr.length; i++) {
             console.log(arr[i])
@@ -26,7 +26,11 @@ export default function Target({position,hidden, arr, setCorrect, setHidden}) {
     }
 
 
-    return (<div style={{position: 'absolute', width: '80px', height: '80px', border: '1px solid black', top: position[1]-40, left: position[0]-40, visibility: (hidden ? 'hidden' : 'visible')}}>
-        <button onClick={checkPosition}>Confirm</button>
+    return (
+    <div className='target-wrapper' style={{visibility: (hidden ? 'hidden' : 'visible')}}>
+    
+    <div style={{position: 'absolute', width: '100px', height: '100px', border: '5px dashed black', borderRadius: '50%',top: position[1]-50, left: position[0]-50}}>
+    <button className='confirmPos' onClick={checkPosition}></button>
+    </div>
     </div>)
 }

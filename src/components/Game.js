@@ -18,13 +18,12 @@ export default function Game({pos}) {
         if (correct.length < 1) {
             setTime(0);
             inter = setInterval(()=>{
-                setTime(c => +(0.1 + c).toFixed(12));
-            }, 100)
+                setTime(c => +(.01 + c).toFixed(12));
+            }, 10)
             console.log("one register.")
         }
 
         return () => {
-            console.log("Ni hou!")
             clearInterval(inter)
         }
 
@@ -47,7 +46,9 @@ export default function Game({pos}) {
     return (<div className="outerDiv">
         <Target position={position} hidden={hidden} arr={pos} setCorrect={setCorrect} setHidden={setHidden}/>
         <img className="mainImg"  src={waldo} alt="Waldo Game, necessary to play game." onClick={createTarget}/>
-        <p className='stopWatch'>{time}</p>
+        <div className='stopWatch-wrapper'>
+        <p className='stopWatch'>{time.toLocaleString(undefined, {minimumFractionDigits: 2})}</p>
+        </div>
         {correct.map((elem, index) => (<img src={check} key={index} alt="Check!" style={{position: "absolute", left: elem[0], top: elem[1], width: '30px', height: '30px'}}/>))}
         {correct.length === 1 ? <InputLeader score={time}/> : ''}
     </div>)

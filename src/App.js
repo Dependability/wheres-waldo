@@ -1,3 +1,4 @@
+import "./styles/style.css"
 import Game from './components/Game'
 import config from './components/Firebase'
 import {initializeApp} from 'firebase/app'

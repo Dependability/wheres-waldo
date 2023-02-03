@@ -16,8 +16,8 @@ function Leaderboard() {
         const app = initializeApp(config);
         const db = getFirestore(app);
         const col = collection(db, `leaderboard/${level}/leader`);
-        const q = query(col, orderBy('score', 'desc'), limit(20));
-        const queryItems = getDocs(q).then(result => {
+        const q = query(col, orderBy('score'), limit(20));
+        getDocs(q).then(result => {
             const newArray = [];
             result.forEach((item)=>{
                 newArray.push(item.data())
@@ -28,13 +28,20 @@ function Leaderboard() {
 
     },[])
 
-    return <div className='leaderboard'>
-        <div className='header'><div>Name</div><div>Score</div></div>
+    return <div className='leaderboard-wrap'>
+        <table className='leaderboard'>
+        <thead>
+            <th>Name</th>
+            <th>Time</th>
+        </thead>
+        <tbody>
         {board.map((val, ind)=> { return(
-            <div key={ind}>
-                <div>{val.name}</div><div>{val.score}</div>
-            </div>)
+            <tr key={ind}>
+                <td>{val.name}</td><td>{val.score}s</td>
+            </tr>)
         })}
+        </tbody>
+    </table>
     </div>
 }
 

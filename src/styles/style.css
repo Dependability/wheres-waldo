@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Unbounded', sans-serif;
+
+}
+
+.root {
+    position: relative;
+}
+body {
+    padding: 0;
+    margin: 0;
+    width:fit-content;
+}
+
+.stopWatch-wrapper {
+    position: fixed;
+    left:0;
+    top: 100px;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.stopWatch {
+    font-variant-numeric: tabular-nums;
+    
+    width: fit-content;
+    min-width: 150px;
+    font-size: 28px;
+    padding: 10px;
+    color: white;
+
+    user-select: none;
+    border-radius: 9999px;
+    font-weight: 800;
+    text-align: center;
+    background-color: #00000099;
+
+
+}
+.inputLeader  {
+    background-color: white;
+    width: 440px;
+    height: 240px;
+    font-size: 24px;
+    padding: 30px;
+
+}
+
+.inputLeader p {
+    padding-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+.inputLeader span {
+    color: red;
+
+}
+.inputLeader form div {
+    display: flex;
+    gap: 10px;
+}
+.inputLeader form div > *:hover {
+    opacity: 1;
+}
+.inputLeader form div > *:first-child {
+    background-color: red;
+}
+.inputLeader form div > *{
+    background-color: green;
+    opacity: .6;
+    cursor: pointer;
+    width:100px;
+    padding: 10px;
+    font-family: "Unbounded", sans-serif;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.inputLeader form {
+
+    margin-top: 20px;
+}
+.inputLeader form label, .inputLeader form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+}
+
+.inputLeader input {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 16px;
+}
+
+.inputLeader-wrap {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000099;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+}
+nav h1 {
+    user-select: none;
+}
+
+nav {
+    display: flex;
+    padding: 10px 30px;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 1px 5px 1px black;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: white;
+    z-index: 2;
+    
+}
+.leaderboard-wrap {
+    margin: 80px 0 0 0;
+    width: 100vw;
+}
+
+.leaderboard {
+    margin: 0 auto;
+    border: 3px grey solid;
+    border-collapse: collapse; 
+    padding: 10px;  
+}
+.leaderboard thead th {
+    border-bottom: 3px grey solid;
+    text-align: center;
+}
+.leaderboard tbody tr td:first-child{
+    border-right: 3px grey solid;
+    
+}
+
+.leaderboard tbody td{
+    font-size: 24px;
+    padding: 5px;
+
+}
+.leaderboard tbody td:nth-child(2) {
+    text-align: center;
+}
+
+.leaderboard tbody tr:nth-child(odd) {
+    background-color: lightgray;
+}
+.leaderboard thead th:first-child{
+    width: 400px;
+    
+    
+}
+
+.leaderboard thead th:nth-child(2) {
+    width: 200px;
+
+}
+
+.leaderboard thead {
+    font-size: 32px;
+}
+
+
+nav a, .menuItem a, .menuItem button {
+    background-color: rebeccapurple;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    margin: 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: block;
+    border: 0;
+    font-size: 18px;
+
+}
+
+.mainMenu {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 80vw;
+    margin: 80px auto 0;
+    
+
+}
+
+.menuItem {
+    padding: 10px;
+    box-shadow: 0px 1px 5px 1px black;
+
+}
+.mainMenu-wrap {
+    width: 100vw;
+
+}
+.menuItem .buttons{
+    
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.menuItem .title {
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+.menuItem img {
+    border: 3px rebeccapurple solid;
+    height: 216px;
+    width: 386px;
+    display: block;
+    object-fit: none;
+    cursor: pointer;
+    transition: all 100ms;
+}
+
+.menuItem img:hover {
+    object-fit: cover;
+}
+
+.outerDiv {
+    position: relative;
+    margin-top: 80px;
+    padding: 0 3px;
+    
+}
+
+.confirmPos {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    right: 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: #09ee09;
+    cursor: pointer;
+    transition: all 150ms;
+    background-image: url('./iconmonstr-check-mark-9.svg');
+    background-repeat: no-repeat;
+    background-position: 8px;
+}
+.confirmPos:hover {
+    transform: scale(1.1);
+    background-color: #10b410;
+    
+}
+
