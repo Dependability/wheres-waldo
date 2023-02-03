@@ -60,6 +60,7 @@ body {
 }
 .inputLeader span {
     color: red;
+    font-weight: 600;
 
 }
 .inputLeader form div {
