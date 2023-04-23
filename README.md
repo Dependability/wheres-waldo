@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Where's Waldo
+
+This is based on the puzzle game, Where's Waldo. Do your best to find Waldo in the images!
+
+👉 [LIVE DEMO](https://dependability.github.com/wheres-waldo/)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
