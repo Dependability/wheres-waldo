@@ -41,7 +41,7 @@ function App() {
     ,[]);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='wheres-waldo'>
     <nav>
     <h1>Where's Waldo?</h1>
     <div className='buttons'>
