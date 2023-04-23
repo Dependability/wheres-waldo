@@ -5,7 +5,7 @@ import {initializeApp} from 'firebase/app'
 import {getFirestore} from 'firebase/firestore'
 import { doc, getDoc } from "firebase/firestore";
 import {useEffect,useState} from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import MainMenu from './components/MainMenu';
 import Leaderboard from './components/Leaderboard'
 
@@ -45,7 +45,7 @@ function App() {
     <nav>
     <h1>Where's Waldo?</h1>
     <div className='buttons'>
-      <a href='/'>Main Menu</a>
+      <Link to='/'>Main Menu</Link>
     </div>
     </nav>
     
