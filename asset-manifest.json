@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/wheres-waldo/static/css/main.ae3741fa.css",
+    "main.js": "/wheres-waldo/static/js/main.768a0ec2.js",
+    "static/media/waldo.jpg": "/wheres-waldo/static/media/waldo.a0e0289ef358bd1a3745.jpg",
+    "static/media/check.png": "/wheres-waldo/static/media/check.0037d1de0c3112e1305e.png",
+    "index.html": "/wheres-waldo/index.html",
+    "static/media/iconmonstr-check-mark-9.svg": "/wheres-waldo/static/media/iconmonstr-check-mark-9.3ba7a59e0f5da304f81b.svg",
+    "main.ae3741fa.css.map": "/wheres-waldo/static/css/main.ae3741fa.css.map",
+    "main.768a0ec2.js.map": "/wheres-waldo/static/js/main.768a0ec2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ae3741fa.css",
+    "static/js/main.768a0ec2.js"
+  ]
+}
